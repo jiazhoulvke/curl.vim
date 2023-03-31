@@ -119,7 +119,7 @@ function! curl_vim#request(method, url, data = {}, options = {}) abort
 				let data = json_encode(a:data)
 			endif
 			let tmp = tempname()
-			if writefile([json_encode(data)], tmp, "b") == -1
+			if writefile([data], tmp, "b") == -1
 				return {'code': -1, 'msg': 'write data to temporary file failed'}
 			endif
 			let cmd = cmd .' -d "@'.tmp.'"'
