@@ -16,6 +16,7 @@
 
 最主要的接口是 `curl_vim#request()` ，其他接口的都是对 `curl_vim#request()` 的简单封装。
 
+- `method` 为请求方式，如 GET、POST、DELETE等。
 - `url` 是需要请求的地址。
 - `data` 为需要发送的数据，可以是 string 或者 dict
 - `options` 是 `curl` 参数。
